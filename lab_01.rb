@@ -38,7 +38,7 @@ dealer_hand_total = rand(12) + 10
 # Write some code to ask the player if the want to "stand" or "hit"
 # (take another card). If they want to take another card, set their
 # current_hand_total to be equal to their current_hand_total plus the
-# next card value.
+# next card value, and display it.
 
 # If the player _does_ take another card, this will be the value of
 # that card.
@@ -51,7 +51,7 @@ next_card_value = rand(10) + 2
 # Part 3
 #
 # Work out who has won and display it. When the player has a total over
-# 21, or then they lose. When the player has a total higher than the
+# 21, they lose. When the player has a total higher than the
 # dealer then they win. When the player has a total less than or equal
 # to the dealer's total, they lose.
 
