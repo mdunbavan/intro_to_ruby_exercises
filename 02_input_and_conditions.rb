@@ -23,16 +23,33 @@
 #    letters or longer, display "You have a long name". Otherwise,
 #    display "Your name is average sized".
 
-bin = "rubbish"
-
-if bin != "rubbish"
- puts "This bin is #{bin}"
-else
- puts "This bin is not rubbish"
-end
+# bin = "rubbish"
+# dealer = 31
+# player = 31
+# 
+# if bin == "rubbish"
+#  puts "This bin is #{bin}"
+# else
+#  puts "This bin is not rubbish"
+# end
+# 
+# if player > 31
+#  puts "This player has won!"
+# else player == 31
+#  puts "This player has drawn"
+# else
+#  puts "This player has lost!"
+# end
 
 
 # 3. Ask the user to input a degree value from 0 to 359. Assuming 0 is
 #    North, use "case" and "when" to output whether the degrees point
 #    Northeast, Southeast, Southwest, or Northwest. Remember that
 #    gets.chomp retrieves a string value.
+
+
+puts "What is your age:"
+
+age = gets.chomp
+
+puts "10 years ago you were: #{age.to_i - 10}"
