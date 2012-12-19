@@ -2,6 +2,10 @@
 #    the year of birth. Display the output of calling the method with
 #    your age.
 
+def age(year,number)
+	year - number
+end
+puts age(2012, 27)
 
 # 2. Write a method that takes any number of numeric arguments, and
 #    then prints out the month name for each of those numbers on a
@@ -12,3 +16,17 @@
 months = ["January", "February", "March", "April",
           "May", "June", "July", "August", "September",
           "October", "November", "December"]
+
+
+def print_month_names(*numbers)
+	months = ["January", "February", "March", "April",
+          "May", "June", "July", "August", "September",
+          "October", "November", "December"]
+          
+     result = ""
+	numbers.each do |number|
+		result = result + months[number] + ""
+end
+puts result
+end
+print_month_names(1,3,7)
