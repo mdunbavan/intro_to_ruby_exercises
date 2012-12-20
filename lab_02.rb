@@ -20,9 +20,26 @@
 
 # declare hash representing the suite of a deck of cards, with abbreviations for the keys and full suit names for the values
 
-
+SUITS = {'c' => 'clubs', 'h' => 'hearts', 'd' => 'diamonds', 's' => 'spades'}
 
 # for each rank (1 through 13) in each suit (C, D, H, S) display the rank name (e.g., "Ace", "Queen", "9" etc.) followed 
 # by its full suit name ("Hearts", "Spades", etc.).
 
 
+SUITS.each do |letter, full_suit_name|
+
+	(1..13).each do |rank|
+		case rank
+		when 1
+			puts "Ace of #{full_suit_name}"
+		when 2..10
+			puts "#rank{rank} of #{full_suit_name}"
+		when 11
+			puts "Jack of #{full_suit_name}"
+		when 12
+			puts "Queen of #{full_suit_name}"
+		when 13
+			puts "King of #{full_suit_name}"
+		end
+	end
+end

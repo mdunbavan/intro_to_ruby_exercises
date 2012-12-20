@@ -18,15 +18,15 @@ months = ["January", "February", "March", "April",
           "October", "November", "December"]
 
 
-def print_month_names(*numbers)
+def print_month_names(*numbers)#parameters the *creates an array
 	months = ["January", "February", "March", "April",
           "May", "June", "July", "August", "September",
           "October", "November", "December"]
           
      result = ""
 	numbers.each do |number|
-		result = result + months[number] + ""
+		result = result + months[number - 1] + ""
 end
 puts result
 end
-print_month_names(1,3,7)
+print_month_names(11,11,11)

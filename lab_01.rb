@@ -4,6 +4,16 @@
 # representing the rank of a playing card, and then display the
 # integer value of that card in blackjack.
 #
+
+puts "What is your card value:"
+card_value = gets.chomp.to_i
+puts "What is your card name:"
+card_name = gets.chomp
+
+#puts "Your card value is: #{card_value.to_i}"
+#puts "Your card name is: #{card_name}"
+
+
 # Allowed inputs are
 # 2 through 9, each of which just have their value; 
 # 'T', 'J', 'Q' and 'K', which have the value 10;
@@ -19,6 +29,47 @@
 
 
 # ... your code here ...
+=begin
+ case card_value
+ when '2'..'9'
+   puts card_value.to_i
+ end
+=end
+ 
+ if player == '2'..'9'
+  puts card_value.to_i
+ else player > 9
+  puts "this is not a number"
+ end
+
+ 
+#=======================================================
+# if card_value > 2
+# 
+# and the reason is that you're trying to compare a String, card value,
+# with an integer 2. i.e. you're doing something like "3" > 2, rather
+# than 3 > 2.
+# 
+# there are 2 ways to deal with this problem, one better than the other
+# 
+# - the first is convert your input to an integer before doing a
+# comparison, so do something like
+# 
+# card_value = gets.chomp.to_i
+# # instead of what you have which is
+# card_value = gets.chomp
+# 
+# Then the comparison will work, but you have the problem of what to do
+# with the non-numeric card values which are allowed, such as 'T', or
+# 'K' (if you call to_i on these strings, you'll get back the answer 0).
+# 
+# - the second is to take a look at the case statement, and remember
+# that letters can be ranges too, so do something like
+# 
+# case card_value
+# when '2'..'9'
+#   card_value.to_i
+#=======================================================
 
 
 # Part 2
@@ -46,6 +97,9 @@ next_card_value = rand(10) + 2
 
 
 # ... your code here ...
+
+
+
 
 
 # Part 3
