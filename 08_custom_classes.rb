@@ -4,6 +4,13 @@
 # method which sets both of these attributes for a new object of this
 # class. Then, declare a full_name method which returns the first and
 # last name values, concatenated as a single full name.
+
+require_relative "lib/Person"
+
+me = Person.new("Mark", "Dunbavan")
+
+puts me.full_name
+
 #
 # Once you've defined the class, write code below to create a Person
 # object initialized with your own first and last name, then print

@@ -5,6 +5,18 @@
 # file.  Check your work on the file system.
 puts "\n--------------------" # line to distinguish exercise output
 
+puts "Enter the filename:"
+filename = gets.chomp
+
+puts "Please put your text in here:"
+text = gets.chomp
+
+time = Time.now
+
+File.open(filename + ".txt", "a") do |file_data|
+  file_data.write "#{time}\n#{text}"
+end
+
 
 # 2. Use the File class to open the file created above (using the same
 # input from above), to read and display its contents to the terminal
@@ -12,3 +24,8 @@ puts "\n--------------------" # line to distinguish exercise output
 # print out each line.
 puts "\n--------------------" # line to distinguish exercise output
 
+puts lines = File.readlines(filename + ".txt")
+puts lines
+
+	
+	
